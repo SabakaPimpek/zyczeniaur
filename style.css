@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > img
+{
+    position: absolute;
+}
+
+.slide
+{
+    animation: moveBus 8s linear forwards;
+}
+
+.bus-wrap
+{   
+    transform: scale(1.5);
+    height: 100%;
+}
+
+.bus
+{
+    position: absolute;
+    top: 600px;
+    animation: busJump 5s infinite;
+}
+
+.bus-text
+{
+    position: absolute;
+    z-index: 999;
+    top: 76px;
+    left: 665px;
+    color: #e6a021;
+    font-size: 15px;
+    width: 63px;
+    height: 16px;
+    overflow: hidden;
+    text-align-last: auto;
+}
+
+.bus-text span
+{
+    width: 600px;
+    display: inline-block;
+    animation: textScroll 40s linear infinite;
+    animation-delay: 2s;
+}
+
+.wheels
+{
+    position: relative;
+}
+
+#wheel-left
+{
+    position: absolute;
+    top: -293px;
+    left: 338px;
+    z-index: 99;
+    animation: rotating 2s linear infinite;
+}
+
+#wheel-right
+{
+    position: absolute;
+    top: -293px;
+    left: 661px;
+    z-index: 99;
+    animation: rotating 2s linear infinite;
+}
+
+.rocket
+{
+    transform: translate(-35%, -25%);
+    position: absolute;
+    top: 920px;
+    animation: moveRocketCar 4s linear forwards;
+    animation-delay: 9s;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes busJump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+@keyframes moveBus {
+  0% {
+    transform: translate(-25%, -25%);
+  }
+  100% {
+    transform: translate(25%, 25%);
+  }
+}
+
+@keyframes moveRocketCar {
+    0% {
+        transform: translate(-25%, -25%);
+      }
+    45% {
+      transform: translate(50%, -25%);
+    }
+    100% {
+        transform: translate(180%,-300%) rotate(80deg);
+    }
+}
+
+@keyframes textScroll
+{
+    from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-89%);
+      }
+}
