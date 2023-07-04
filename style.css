@@ -138,6 +138,6 @@ body > div > img
         transform: translateX(0);
       }
       to {
-        transform: translateX(-89%);
+        transform: translateX(-95%);
       }
 }
