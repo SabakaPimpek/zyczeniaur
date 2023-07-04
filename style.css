@@ -95,6 +95,26 @@ body > div > img
     animation-delay: 9s;
 }
 
+.komunikat {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    text-align: center;
+    font-size: 30px;
+    z-index: 99999;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    opacity: 0;
+}
+
+.komunikat > p
+{
+    font-size: 60px;
+    color: white;
+}
+
 @keyframes rotating {
     from {
       transform: rotate(0deg);
@@ -145,6 +165,13 @@ body > div > img
       to {
         transform: translateX(-95%);
       }
+}
+
+@media screen and (max-width: 400px){
+    .komunikat
+    {
+        opacity: 1;
+    }
 }
 
 @media (max-height: 600px) and (orientation: landscape) {
